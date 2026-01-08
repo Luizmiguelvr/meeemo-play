@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meeemo Play - Aprender a Palavra de Deus brincando. Músicas cristãs educativas para crianças de 0 a 5 anos.">
+    <title>Meeemo Play - Educação Cristã Infantil</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Fixo -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25" cy="25" r="23" fill="#FFD600" stroke="#FFFFFF" stroke-width="2"/>
+                        <text x="25" y="32" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#1E88E5">M</text>
+                        <circle cx="15" cy="15" r="3" fill="#1E88E5"/>
+                        <circle cx="35" cy="15" r="3" fill="#1E88E5"/>
+                    </svg>
+                    <span class="logo-text">Meeemo Play</span>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                        <li><a href="#conteudo" class="nav-link">Músicas</a></li>
+                        <li><a href="#pais" class="nav-link">Para os Pais</a></li>
+                        <li><a href="#plataformas" class="nav-link">YouTube</a></li>
+                        <li><a href="#plataformas" class="nav-link">Spotify</a></li>
+                    </ul>
+                    <button class="btn-assistir" id="btnAssistir">Assistir Agora</button>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="floating-note note-1">♪</div>
+            <div class="floating-note note-2">♫</div>
+            <div class="floating-note note-3">♪</div>
+            <div class="floating-note note-4">♫</div>
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+            <div class="bubble bubble-4"></div>
+            <div class="cloud cloud-1">☁</div>
+            <div class="cloud cloud-2">☁</div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Aprender a Palavra de Deus brincando <span class="emoji">🎵📖</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Músicas cristãs educativas e animadas para crianças aprenderem sobre Deus de forma divertida e memorável
+                </p>
+                <div class="hero-buttons">
+                    <a href="#plataformas" class="btn btn-youtube">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                        Assistir no YouTube
+                    </a>
+                    <a href="#plataformas" class="btn btn-spotify">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.84-.179-.84-.66 0-.359.24-.66.54-.779 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.242 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.78-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
+                        </svg>
+                        Ouvir no Spotify
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section class="sobre" id="sobre">
+        <!-- Elementos decorativos temporariamente desabilitados para debug -->
+        <!-- <div class="section-background-decorations">
+            <svg class="bg-note bg-note-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 20 L30 60 L50 60 L50 20 Z" fill="currentColor"/>
+                <circle cx="65" cy="50" r="15" fill="currentColor"/>
+            </svg>
+            <svg class="bg-note bg-note-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 30 L25 70 L45 70 L45 30 Z" fill="currentColor"/>
+                <circle cx="60" cy="60" r="12" fill="currentColor"/>
+            </svg>
+            <div class="bg-bubble bg-bubble-1"></div>
+            <div class="bg-bubble bg-bubble-2"></div>
+            <div class="bg-bubble bg-bubble-3"></div>
+        </div> -->
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sobre o Meeemo Play</h2>
+                <div class="title-decoration"></div>
+            </div>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <p class="sobre-intro">
+                        <strong>"Meeemo"</strong> vem de <strong>memorizar</strong>! 🧠✨
+                    </p>
+                    <p>
+                        O Meeemo Play é um projeto dedicado a ensinar a Palavra de Deus para crianças de forma alegre, 
+                        educativa e musical. Acreditamos que a melhor forma de aprender é através da música e da diversão!
+                    </p>
+                    <p>
+                        Nosso conteúdo é especialmente desenvolvido para crianças de <strong>0 a 5 anos</strong>, 
+                        com músicas cativantes, animações coloridas e mensagens bíblicas que ficam na memória.
+                    </p>
+                    <div class="sobre-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">🎵</span>
+                            <span>Músicas Catantes</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">📖</span>
+                            <span>Base Bíblica</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🎨</span>
+                            <span>Animações Coloridas</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">👶</span>
+                            <span>Para Crianças</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sobre-image">
+                    <div class="image-placeholder">
+                        <svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="150" cy="150" r="140" fill="#1E88E5" opacity="0.2"/>
+                            <circle cx="150" cy="150" r="100" fill="#64B5F6" opacity="0.3"/>
+                            <text x="150" y="160" font-family="Arial, sans-serif" font-size="80" font-weight="bold" text-anchor="middle" fill="#1E88E5">M</text>
+                            <circle cx="100" cy="100" r="15" fill="#FFD600"/>
+                            <circle cx="200" cy="100" r="15" fill="#00C853"/>
+                            <path d="M120 200 Q150 230 180 200" stroke="#64B5F6" stroke-width="8" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Conteúdo -->
+    <section class="conteudo" id="conteudo">
+        <!-- Elementos decorativos temporariamente desabilitados para debug -->
+        <!-- <div class="section-background-decorations">
+            <svg class="bg-note bg-note-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 20 L30 60 L50 60 L50 20 Z" fill="currentColor"/>
+                <circle cx="65" cy="50" r="15" fill="currentColor"/>
+            </svg>
+            <svg class="bg-note bg-note-4" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <text x="50" y="60" font-size="60" text-anchor="middle" fill="currentColor">♪</text>
+            </svg>
+            <div class="bg-bubble bg-bubble-4"></div>
+            <div class="bg-bubble bg-bubble-5"></div>
+        </div> -->
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nosso Conteúdo</h2>
+                <div class="title-decoration"></div>
+            </div>
+            <div class="cards-grid">
+                <div class="card card-1">
+                    <div class="card-icon">📜</div>
+                    <h3 class="card-title">Versículos Cantados</h3>
+                    <p class="card-text">
+                        Versículos bíblicos transformados em músicas fáceis de memorizar. 
+                        Cada canção ajuda as crianças a guardarem a Palavra de Deus no coração.
+                    </p>
+                </div>
+                <div class="card card-2">
+                    <div class="card-icon">🎼</div>
+                    <h3 class="card-title">Músicas Bíblicas</h3>
+                    <p class="card-text">
+                        Histórias bíblicas contadas através de músicas animadas e educativas. 
+                        De Noé até Jesus, todas as histórias ganham vida!
+                    </p>
+                </div>
+                <div class="card card-3">
+                    <div class="card-icon">🎬</div>
+                    <h3 class="card-title">Animações Educativas</h3>
+                    <p class="card-text">
+                        Vídeos coloridos e interativos que ensinam valores cristãos, 
+                        números, cores e muito mais de forma divertida.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Para os Pais -->
+    <section class="pais" id="pais">
+        <!-- Elementos decorativos temporariamente desabilitados para debug -->
+        <!-- <div class="section-background-decorations">
+            <svg class="bg-note bg-note-5" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <text x="50" y="60" font-size="60" text-anchor="middle" fill="currentColor">♫</text>
+            </svg>
+            <svg class="bg-note bg-note-6" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 30 L25 70 L45 70 L45 30 Z" fill="currentColor"/>
+                <circle cx="60" cy="60" r="12" fill="currentColor"/>
+            </svg>
+            <div class="bg-bubble bg-bubble-6"></div>
+            <div class="bg-cloud bg-cloud-1">☁</div>
+        </div> -->
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Para os Pais</h2>
+                <div class="title-decoration"></div>
+            </div>
+            <div class="pais-content">
+                <div class="pais-card">
+                    <div class="pais-icon">🛡️</div>
+                    <h3>Conteúdo Seguro</h3>
+                    <p>
+                        Todo o conteúdo do Meeemo Play é cuidadosamente desenvolvido para ser 
+                        seguro e apropriado para crianças. Sem violência, sem conteúdo inadequado, 
+                        apenas diversão e aprendizado saudável.
+                    </p>
+                </div>
+                <div class="pais-card">
+                    <div class="pais-icon">📚</div>
+                    <h3>Base Bíblica Sólida</h3>
+                    <p>
+                        Todas as músicas e histórias são baseadas na Bíblia Sagrada, 
+                        ensinando valores cristãos e princípios que ajudarão seus filhos 
+                        a crescerem com uma base sólida na fé.
+                    </p>
+                </div>
+                <div class="pais-card">
+                    <div class="pais-icon">💚</div>
+                    <h3>Sem Estímulos Agressivos</h3>
+                    <p>
+                        Nossas animações são suaves e coloridas, sem cortes rápidos ou 
+                        estímulos excessivos. O ritmo é pensado para acalmar e educar, 
+                        não para superestimular.
+                    </p>
+                </div>
+                <div class="pais-card">
+                    <div class="pais-icon">⏰</div>
+                    <h3>Ideal para Rotina</h3>
+                    <p>
+                        Perfeito para momentos de aprendizado, antes de dormir, ou durante 
+                        brincadeiras. O conteúdo pode ser facilmente incorporado na rotina 
+                        diária da família.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Plataformas -->
+    <section class="plataformas" id="plataformas">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Onde Nos Encontrar</h2>
+                <div class="title-decoration"></div>
+            </div>
+            <div class="plataformas-grid">
+                <a href="#" class="plataforma-card plataforma-youtube" target="_blank" rel="noopener noreferrer">
+                    <div class="plataforma-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </div>
+                    <h3 class="plataforma-title">YouTube</h3>
+                    <p class="plataforma-text">Assista nossos vídeos e animações</p>
+                </a>
+                <a href="#" class="plataforma-card plataforma-youtube-kids" target="_blank" rel="noopener noreferrer">
+                    <div class="plataforma-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </div>
+                    <h3 class="plataforma-title">YouTube Kids</h3>
+                    <p class="plataforma-text">Versão segura para crianças</p>
+                </a>
+                <a href="#" class="plataforma-card plataforma-spotify" target="_blank" rel="noopener noreferrer">
+                    <div class="plataforma-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.84-.179-.84-.66 0-.359.24-.66.54-.779 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.242 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.78-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="plataforma-title">Spotify</h3>
+                    <p class="plataforma-text">Ouça nossas músicas</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25" cy="25" r="23" fill="#FFD600" stroke="#FFFFFF" stroke-width="2"/>
+                        <text x="25" y="32" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#1E88E5">M</text>
+                        <circle cx="15" cy="15" r="3" fill="#FFFFFF"/>
+                        <circle cx="35" cy="15" r="3" fill="#FFFFFF"/>
+                    </svg>
+                    <span class="footer-logo-text">Meeemo Play</span>
+                </div>
+                <p class="footer-text">
+                    © Meeemo Play — Educação cristã infantil<br>
+                    Feito com amor <span class="heart">💛</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Carregar config.js ANTES de main.js -->
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

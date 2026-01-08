@@ -1,0 +1,119 @@
+/**
+ * ============================================
+ * MEEEMO PLAY - Variáveis CSS
+ * ============================================
+ * 
+ * ALTERE AQUI PARA MUDAR AS CORES E ESTILOS DO SITE INTEIRO
+ * 
+ * Todas as cores, bordas, sombras e espaçamentos estão definidos aqui.
+ * Nenhuma cor deve ser hardcoded no style.css
+ */
+
+:root {
+    /* ============================================
+       PALETA DE CORES
+       ============================================
+       Altere aqui para mudar as cores em todo o site
+    */
+    
+    --color-primary: #1E88E5;      /* Azul principal - identidade da marca */
+    --color-blue-light: #64B5F6;   /* Azul claro */
+    --color-yellow: #FFD600;       /* Amarelo vibrante */
+    --color-green: #00C853;        /* Verde vibrante */
+    --color-red: #FF5252;          /* Vermelho vibrante (detalhes) */
+    --color-white: #FFFFFF;        /* Branco */
+    --color-dark: #1565C0;         /* Azul escuro (footer) */
+    
+    /* Cores de texto */
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #333;
+    --color-text-light: #666;
+    --color-text-white: #FFFFFF;
+    
+    /* ============================================
+       CORES DE FUNDO
+       ============================================
+    */
+    
+    --bg-light: #F5F9FF;           /* Azul muito claro para fundos */
+    --bg-white: #FFFFFF;
+    --bg-dark: #1565C0;             /* Azul escuro para footer */
+    
+    /* ============================================
+       GRADIENTES
+       ============================================
+    */
+    
+    --bg-gradient-hero: linear-gradient(135deg, #1E88E5 0%, #64B5F6 100%);
+    --bg-gradient-card-1: linear-gradient(135deg, #FFD600 0%, #FFA726 100%);
+    --bg-gradient-card-2: linear-gradient(135deg, #00C853 0%, #4CAF50 100%);
+    --bg-gradient-card-3: linear-gradient(135deg, #1E88E5 0%, #42A5F5 100%);
+    
+    /* ============================================
+       TIPOGRAFIA
+       ============================================
+    */
+    
+    --font-primary: 'Fredoka', sans-serif;
+    --font-size-base: 16px;
+    --font-size-h1: 3rem;
+    --font-size-h2: 2.5rem;
+    --font-size-h3: 1.8rem;
+    
+    /* ============================================
+       ESPAÇAMENTOS
+       ============================================
+    */
+    
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+    
+    /* ============================================
+       BORDAS
+       ============================================
+    */
+    
+    --border-radius-sm: 10px;
+    --border-radius-md: 20px;
+    --border-radius-lg: 30px;
+    --border-radius-xl: 50px;
+    --border-radius-card: 40px;
+    --border-radius-pais: 35px;
+    
+    /* ============================================
+       SOMBRAS
+       ============================================
+    */
+    
+    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.2);
+    --shadow-card: 0 8px 25px rgba(30, 136, 229, 0.15);
+    --shadow-card-hover: 0 15px 40px rgba(30, 136, 229, 0.3);
+    --shadow-header: 0 4px 20px rgba(30, 136, 229, 0.3);
+    
+    /* ============================================
+       TRANSIÇÕES
+       ============================================
+    */
+    
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    --transition-bounce: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* ============================================
+       OPACIDADES
+       ============================================
+    */
+    
+    --opacity-note: 0.08;
+    --opacity-bubble: 0.06;
+    --opacity-cloud: 0.05;
+    --opacity-floating-note: 0.4;
+    --opacity-hero-subtitle: 0.95;
+}
+
