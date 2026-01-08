@@ -46,19 +46,8 @@
             if (el) el.textContent = config.brandName;
         });
 
-        // Atualizar título do hero
-        const heroTitle = document.querySelector('.hero-title');
-        if (heroTitle && config.slogan) {
-            const emoji = heroTitle.querySelector('.emoji');
-            const emojiText = emoji ? emoji.outerHTML : ' 🎵📖';
-            heroTitle.innerHTML = `${config.slogan}${emojiText}`;
-        }
-
-        // Atualizar subtítulo do hero
-        const heroSubtitle = document.querySelector('.hero-subtitle');
-        if (heroSubtitle && config.description) {
-            heroSubtitle.textContent = config.description;
-        }
+        // Título e subtítulo do hero são gerenciados pelo i18n
+        // Não sobrescrever aqui para manter compatibilidade com traduções
 
         // Atualizar links dos botões
         const btnYouTube = document.querySelector('.btn-youtube');
@@ -95,9 +84,39 @@
 
     // Aplicar configurações quando o DOM estiver pronto
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', applyConfig);
+        document.addEventListener('DOMContentLoaded', function() {
+            applyConfig();
+            initI18n();
+        });
     } else {
         applyConfig();
+        initI18n();
+    }
+
+    // ============================================
+    // INTERNACIONALIZAÇÃO (i18n)
+    // ============================================
+    
+    function initI18n() {
+        // Verificar se i18n está disponível
+        if (typeof i18n === 'undefined') {
+            console.warn('i18n não encontrado. Certifique-se de que i18n.js está carregado.');
+            return;
+        }
+
+        // Inicializar i18n
+        i18n.init();
+
+        // Event listeners para seletor de idioma
+        const langButtons = document.querySelectorAll('.lang-btn');
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                if (lang) {
+                    i18n.setLanguage(lang);
+                }
+            });
+        });
     }
 
     // ============================================

@@ -84,6 +84,12 @@ body {
     gap: var(--spacing-md);
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
 .nav-list {
     display: flex;
     list-style: none;
@@ -120,6 +126,40 @@ body {
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+/* Seletor de Idioma */
+.language-selector {
+    display: flex;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px;
+    border-radius: var(--border-radius-md);
+    backdrop-filter: blur(10px);
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-white);
+    padding: 6px 12px;
+    border-radius: var(--border-radius-sm);
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    min-width: 40px;
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.lang-btn.active {
+    background: var(--color-white);
+    color: var(--color-primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-assistir {
@@ -1366,8 +1406,25 @@ section {
         font-size: 1.2rem;
     }
     
+    .header-actions {
+        flex-direction: row;
+        gap: var(--spacing-xs);
+        align-items: center;
+    }
+    
+    .language-selector {
+        order: 1;
+    }
+    
     .btn-assistir {
+        order: 2;
         display: none;
+    }
+    
+    .lang-btn {
+        padding: 4px 8px;
+        font-size: 0.85rem;
+        min-width: 35px;
     }
     
     .hero {
