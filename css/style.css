@@ -567,6 +567,15 @@ section {
     display: block !important;
 }
 
+.section-subtitle {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
 .section-title {
     font-size: var(--font-size-h2);
     font-weight: 700;
@@ -795,12 +804,30 @@ section {
     color: var(--color-text-primary);
 }
 
-.sobre-intro {
-    font-size: 1.3rem;
+.sobre-text p {
     margin-bottom: var(--spacing-md);
-    color: var(--color-primary); /* Azul principal */
-    font-weight: 600;
 }
+
+/* Frase de fechamento com destaque */
+.sobre-quote {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, rgba(30, 136, 229, 0.1) 0%, rgba(100, 181, 246, 0.1) 100%);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+}
+
+.quote-text {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--color-primary);
+    font-weight: 600;
+    line-height: 1.8;
+    margin: 0 !important;
+}
+
+/* .sobre-intro removido - não usado mais na nova estrutura */
 
 .sobre-text p {
     margin-bottom: var(--spacing-md);

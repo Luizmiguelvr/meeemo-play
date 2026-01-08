@@ -30,16 +30,19 @@ const i18n = {
             'btn.watch': 'Assistir Agora',
             
             // Hero
-            'hero.title': 'Aprender a Palavra de Deus brincando',
-            'hero.subtitle': 'Músicas cristãs educativas e animadas para crianças aprenderem sobre Deus de forma divertida e memorável',
+            'hero.title': 'Meeemo Play existe para ajudar crianças a memorizarem a Palavra de Deus desde cedo.',
+            'hero.subtitle': 'Conteúdo cristão infantil focado em memorização bíblica, valores e repetição intencional por meio da música.',
             'btn.youtube': 'Assistir no YouTube',
             'btn.spotify': 'Ouvir no Spotify',
             
             // Sobre
-            'about.title': 'Sobre o Meeemo Play',
-            'about.intro': '"Meeemo" vem de memorizar! 🧠✨',
-            'about.text1': 'O Meeemo Play é um projeto dedicado a ensinar a Palavra de Deus para crianças de forma alegre, educativa e musical. Acreditamos que a melhor forma de aprender é através da música e da diversão!',
-            'about.text2': 'Nosso conteúdo é especialmente desenvolvido para crianças de 0 a 5 anos, com músicas cativantes, animações coloridas e mensagens bíblicas que ficam na memória.',
+            'about.title': 'Meeemo vem de memorizar.',
+            'about.subtitle': 'E memorizar a Palavra de Deus desde cedo transforma vidas.',
+            'about.text1': 'O Meeemo Play nasceu com um propósito claro: ajudar crianças a guardarem a Palavra de Deus no coração desde os primeiros anos de vida.',
+            'about.text2': 'Usamos a música e a animação como ferramentas, mas nosso foco é formação espiritual, memorização bíblica e fundamentos cristãos sólidos para a infância.',
+            'about.text3': 'Todo o nosso conteúdo é cuidadosamente desenvolvido para crianças de 0 a 5 anos, respeitando o tempo, a linguagem e a capacidade de aprendizado dessa fase tão importante.',
+            'about.text4': 'As canções são simples, repetitivas e intencionais — pensadas para que a Palavra seja lembrada, cantada e vivida no dia a dia da criança.',
+            'about.quote': 'Aqui, a diversão é o caminho.\nA Palavra de Deus é o destino.',
             'feature.music': 'Músicas Catantes',
             'feature.bible': 'Base Bíblica',
             'feature.animation': 'Animações Coloridas',
@@ -89,16 +92,19 @@ const i18n = {
             'btn.watch': 'Watch Now',
             
             // Hero
-            'hero.title': 'Learning God\'s Word through play',
-            'hero.subtitle': 'Educational and animated Christian music for children to learn about God in a fun and memorable way',
+            'hero.title': 'Meeemo Play exists to help children memorize God\'s Word from an early age.',
+            'hero.subtitle': 'Christian children\'s content focused on biblical memorization, values, and intentional repetition through music.',
             'btn.youtube': 'Watch on YouTube',
             'btn.spotify': 'Listen on Spotify',
             
             // Sobre
-            'about.title': 'About Meeemo Play',
-            'about.intro': '"Meeemo" comes from memorize! 🧠✨',
-            'about.text1': 'Meeemo Play is a project dedicated to teaching God\'s Word to children in a joyful, educational, and musical way. We believe that the best way to learn is through music and fun!',
-            'about.text2': 'Our content is specially developed for children aged 0 to 5 years, with captivating songs, colorful animations, and biblical messages that stay in memory.',
+            'about.title': 'Meeemo comes from memorize.',
+            'about.subtitle': 'And memorizing God\'s Word from an early age transforms lives.',
+            'about.text1': 'Meeemo Play was born with a clear purpose: to help children keep God\'s Word in their hearts from their earliest years.',
+            'about.text2': 'We use music and animation as tools, but our focus is spiritual formation, biblical memorization, and solid Christian foundations for childhood.',
+            'about.text3': 'All our content is carefully developed for children aged 0 to 5 years, respecting the time, language, and learning capacity of this very important phase.',
+            'about.text4': 'The songs are simple, repetitive, and intentional — designed so that the Word is remembered, sung, and lived in the child\'s daily life.',
+            'about.quote': 'Here, fun is the path.\nGod\'s Word is the destination.',
             'feature.music': 'Catchy Songs',
             'feature.bible': 'Biblical Foundation',
             'feature.animation': 'Colorful Animations',
@@ -148,16 +154,19 @@ const i18n = {
             'btn.watch': 'Ver Ahora',
             
             // Hero
-            'hero.title': 'Aprender la Palabra de Dios jugando',
-            'hero.subtitle': 'Música cristiana educativa y animada para que los niños aprendan sobre Dios de forma divertida y memorable',
+            'hero.title': 'Meeemo Play existe para ayudar a los niños a memorizar la Palabra de Dios desde temprano.',
+            'hero.subtitle': 'Contenido cristiano infantil enfocado en memorización bíblica, valores y repetición intencional a través de la música.',
             'btn.youtube': 'Ver en YouTube',
             'btn.spotify': 'Escuchar en Spotify',
             
             // Sobre
-            'about.title': 'Acerca de Meeemo Play',
-            'about.intro': '"Meeemo" viene de memorizar! 🧠✨',
-            'about.text1': 'Meeemo Play es un proyecto dedicado a enseñar la Palabra de Dios a los niños de forma alegre, educativa y musical. ¡Creemos que la mejor forma de aprender es a través de la música y la diversión!',
-            'about.text2': 'Nuestro contenido está especialmente desarrollado para niños de 0 a 5 años, con canciones cautivadoras, animaciones coloridas y mensajes bíblicos que quedan en la memoria.',
+            'about.title': 'Meeemo viene de memorizar.',
+            'about.subtitle': 'Y memorizar la Palabra de Dios desde temprano transforma vidas.',
+            'about.text1': 'Meeemo Play nació con un propósito claro: ayudar a los niños a guardar la Palabra de Dios en sus corazones desde los primeros años de vida.',
+            'about.text2': 'Usamos la música y la animación como herramientas, pero nuestro enfoque es la formación espiritual, la memorización bíblica y los fundamentos cristianos sólidos para la infancia.',
+            'about.text3': 'Todo nuestro contenido está cuidadosamente desarrollado para niños de 0 a 5 años, respetando el tiempo, el lenguaje y la capacidad de aprendizaje de esta fase tan importante.',
+            'about.text4': 'Las canciones son simples, repetitivas e intencionales — pensadas para que la Palabra sea recordada, cantada y vivida en el día a día del niño.',
+            'about.quote': 'Aquí, la diversión es el camino.\nLa Palabra de Dios es el destino.',
             'feature.music': 'Canciones Pegajosas',
             'feature.bible': 'Base Bíblica',
             'feature.animation': 'Animaciones Coloridas',
@@ -269,6 +278,9 @@ const i18n = {
                 // apenas atualizar o texto do span
                 if (element.tagName === 'SPAN' && element.parentElement) {
                     element.textContent = translation;
+                } else if (element.classList && element.classList.contains('quote-text')) {
+                    // Para quote-text, preservar quebras de linha
+                    element.innerHTML = translation.replace(/\n/g, '<br>');
                 } else {
                     // Para outros elementos, verificar se tem filhos sem data-i18n
                     const childrenWithoutI18n = Array.from(element.children).filter(
