@@ -50,14 +50,18 @@
         // Não sobrescrever aqui para manter compatibilidade com traduções
 
         // Atualizar links dos botões
-        const btnYouTube = document.querySelector('.btn-youtube');
-        if (btnYouTube && config.links.youtube) {
-            btnYouTube.href = config.links.youtube;
+        const btnYouTube = document.querySelectorAll('.btn-youtube');
+        if (btnYouTube.length > 0 && config.links.youtube) {
+            btnYouTube.forEach(btn => {
+                btn.href = config.links.youtube;
+            });
         }
 
-        const btnSpotify = document.querySelector('.btn-spotify');
-        if (btnSpotify && config.links.spotify) {
-            btnSpotify.href = config.links.spotify;
+        const btnSpotify = document.querySelectorAll('.btn-spotify');
+        if (btnSpotify.length > 0 && config.links.spotify) {
+            btnSpotify.forEach(btn => {
+                btn.href = config.links.spotify;
+            });
         }
 
         // Atualizar links das plataformas

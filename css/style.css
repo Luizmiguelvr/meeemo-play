@@ -808,6 +808,96 @@ section {
     margin-bottom: var(--spacing-md);
 }
 
+/* O Que É (Value Proposition) */
+.value-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.value-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--color-text-primary);
+}
+
+/* Quem é o Meemo */
+.branding-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.branding-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text-primary);
+}
+
+.branding-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Metodologia */
+.method-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.method-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.method-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    background: var(--bg-white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.bullet-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+/* CTA Final */
+.cta-final {
+    background: var(--bg-gradient-hero);
+    color: var(--color-text-white);
+    padding: var(--spacing-xl) 0;
+}
+
+.cta-box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.cta-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.7;
+    color: var(--color-text-white);
+}
+
+.cta-button {
+    font-size: 1.1rem;
+}
+
 /* Frase de fechamento com destaque */
 .sobre-quote {
     margin-top: var(--spacing-lg);
@@ -1392,6 +1482,14 @@ section {
     .sobre-image {
         order: -1;
     }
+
+    .branding-content {
+        grid-template-columns: 1fr;
+    }
+
+    .branding-image {
+        order: -1;
+    }
     
     .nav-list {
         display: none;
@@ -1578,4 +1676,3 @@ section {
         transition-duration: 0.01ms !important;
     }
 }
-

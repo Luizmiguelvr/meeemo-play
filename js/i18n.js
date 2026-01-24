@@ -30,10 +30,28 @@ const i18n = {
             'btn.watch': 'Assistir Agora',
             
             // Hero
-            'hero.title': 'Meeemo Play existe para ajudar crianças a memorizarem a Palavra de Deus desde cedo.',
-            'hero.subtitle': 'Conteúdo cristão infantil focado em memorização bíblica, valores e repetição intencional por meio da música.',
-            'btn.youtube': 'Assistir no YouTube',
-            'btn.spotify': 'Ouvir no Spotify',
+            'hero.title': 'Transforme tempo de tela em tempo de propósito.',
+            'hero.subtitle': 'Um refúgio seguro de músicas e histórias desenhadas para gravar verdades eternas no coração do seu filho, na fase em que ele mais precisa.',
+            'btn.youtube': 'Assista no YouTube',
+            'btn.spotify': 'Ouça no Spotify',
+
+            // O Que É (Value Proposition)
+            'value.title': 'Mais que diversão, uma ferramenta de amor.',
+            'value.text': 'Em um mundo de telas frenéticas, o Meemo Play oferece a "Calma que Ensina". Unimos animação de alta qualidade, ritmos suaves e a neurociência da repetição para ensinar valores bíblicos e morais. Sem ansiedade, apenas aprendizado.',
+
+            // Quem é o Meemo
+            'meemo.title': 'Por que um Elefante?',
+            'meemo.text': 'Dizem que elefantes nunca esquecem. O Meemo é o nosso mascote da memória! Ele e a turma da Bubu existem para garantir que as primeiras palavras que seu filho guarde sejam palavras de vida, amor e do Criador. O que se aprende cantando, não se esquece jamais.',
+
+            // Metodologia (Safe Zone)
+            'method.title': 'A "Zona Segura" para 0 a 5 anos.',
+            'method.bullet1': 'Ritmo Saudável: Edição pensada para não sobrecarregar a mente da criança.',
+            'method.bullet2': 'Repetição Inteligente: Canções simples (Nursery Rhymes) que constroem vocabulário.',
+            'method.bullet3': 'Fundamento Sólido: Histórias que conectam a criança à voz de Deus antes mesmo de saber ler.',
+
+            // CTA Final
+            'cta.text': 'Junte-se a milhares de famílias que escolheram o propósito. Aperte o play na arquinha.',
+            'cta.button': 'Inscreva-se no YouTube',
             
             // Sobre
             'about.title': 'Meeemo vem de memorizar.',
@@ -92,10 +110,28 @@ const i18n = {
             'btn.watch': 'Watch Now',
             
             // Hero
-            'hero.title': 'Meeemo Play exists to help children memorize God\'s Word from an early age.',
-            'hero.subtitle': 'Christian children\'s content focused on biblical memorization, values, and intentional repetition through music.',
+            'hero.title': 'Turn screen time into purpose time.',
+            'hero.subtitle': 'A safe haven of songs and stories designed to etch eternal truths into your child\'s heart, right when they need it most.',
             'btn.youtube': 'Watch on YouTube',
             'btn.spotify': 'Listen on Spotify',
+
+            // O Que É (Value Proposition)
+            'value.title': 'More than fun, a tool of love.',
+            'value.text': 'In a world of chaotic screens, Meemo Play offers "Calm that Teaches." We combine high-quality animation, gentle rhythms, and the neuroscience of repetition to teach biblical and moral values. No anxiety, just learning.',
+
+            // Quem é o Meemo
+            'meemo.title': 'Why an Elephant?',
+            'meemo.text': 'They say elephants never forget. Meemo is our memory mascot! He and the Bubu squad exist to ensure the first words your child keeps are words of life, love, and the Creator. What is learned through song is never forgotten.',
+
+            // Metodologia (Safe Zone)
+            'method.title': 'The "Safe Zone" for ages 0–5.',
+            'method.bullet1': 'Healthy Pacing: Editing designed not to overstimulate the child\'s mind.',
+            'method.bullet2': 'Smart Repetition: Simple songs (Nursery Rhymes) that build vocabulary.',
+            'method.bullet3': 'Solid Foundation: Stories that connect the child to God\'s voice before they can even read.',
+
+            // CTA Final
+            'cta.text': 'Join thousands of families who chose purpose. Press play on the little ark.',
+            'cta.button': 'Subscribe on YouTube',
             
             // Sobre
             'about.title': 'Meeemo comes from memorize.',
@@ -154,10 +190,28 @@ const i18n = {
             'btn.watch': 'Ver Ahora',
             
             // Hero
-            'hero.title': 'Meeemo Play existe para ayudar a los niños a memorizar la Palabra de Dios desde temprano.',
-            'hero.subtitle': 'Contenido cristiano infantil enfocado en memorización bíblica, valores y repetición intencional a través de la música.',
+            'hero.title': 'Transforma el tiempo de pantalla en tiempo de propósito.',
+            'hero.subtitle': 'Un refugio seguro de canciones e historias diseñadas para grabar verdades eternas en el corazón de tu hijo, en la etapa en que más lo necesita.',
             'btn.youtube': 'Ver en YouTube',
             'btn.spotify': 'Escuchar en Spotify',
+
+            // O Que É (Value Proposition)
+            'value.title': 'Más que diversión, una herramienta de amor.',
+            'value.text': 'En un mundo de pantallas frenéticas, Meemo Play ofrece la "Calma que Enseña". Unimos animación de alta calidad, ritmos suaves y la neurociencia de la repetición para enseñar valores bíblicos y morales. Sin ansiedad, solo aprendizaje.',
+
+            // Quem é o Meemo
+            'meemo.title': '¿Por qué un Elefante?',
+            'meemo.text': 'Dicen que los elefantes nunca olvidan. ¡Meemo es nuestra mascota de la memoria! Él y la pandilla de Bubu existen para asegurar que las primeras palabras que tu hijo guarde sean palabras de vida, amor y del Creador. Lo que se aprende cantando, no se olvida jamás.',
+
+            // Metodologia (Safe Zone)
+            'method.title': 'La "Zona Segura" para 0 a 5 años.',
+            'method.bullet1': 'Ritmo Saludable: Edición pensada para no sobrecargar la mente del niño.',
+            'method.bullet2': 'Repetición Inteligente: Canciones simples que construyen vocabulario.',
+            'method.bullet3': 'Fundamento Sólido: Historias que conectan al niño con la voz de Dios antes incluso de saber leer.',
+
+            // CTA Final
+            'cta.text': 'Únete a miles de familias que eligieron el propósito. Dale play al arca.',
+            'cta.button': 'Suscríbete en YouTube',
             
             // Sobre
             'about.title': 'Meeemo viene de memorizar.',
