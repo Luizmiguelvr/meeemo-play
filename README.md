@@ -1,4 +1,4 @@
-# Meeemo Play
+# Meemo Play
 
 Site institucional infantil cristão com design vibrante e alegre. Site estático (HTML, CSS e JavaScript puro) pronto para deploy.
 
@@ -108,4 +108,4 @@ Edite `js/config.js` na seção `logo` e substitua o SVG.
 
 ## 💛
 
-© Meeemo Play — Educação cristã infantil
+© Meemo Play — Educação cristã infantil

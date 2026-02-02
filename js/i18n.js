@@ -1,6 +1,6 @@
 /**
  * ============================================
- * MEEEMO PLAY - Internacionalização (i18n)
+ * MEEMO PLAY - Internacionalização (i18n)
  * ============================================
  * 
  * Suporte a múltiplos idiomas: Português, Inglês, Espanhol
@@ -54,9 +54,9 @@ const i18n = {
             'cta.button': 'Inscreva-se no YouTube',
             
             // Sobre
-            'about.title': 'Meeemo vem de memorizar.',
+            'about.title': 'Meemo vem de memorizar.',
             'about.subtitle': 'E memorizar a Palavra de Deus desde cedo transforma vidas.',
-            'about.text1': 'O Meeemo Play nasceu com um propósito claro: ajudar crianças a guardarem a Palavra de Deus no coração desde os primeiros anos de vida.',
+            'about.text1': 'O Meemo Play nasceu com um propósito claro: ajudar crianças a guardarem a Palavra de Deus no coração desde os primeiros anos de vida.',
             'about.text2': 'Usamos a música e a animação como ferramentas, mas nosso foco é formação espiritual, memorização bíblica e fundamentos cristãos sólidos para a infância.',
             'about.text3': 'Todo o nosso conteúdo é cuidadosamente desenvolvido para crianças de 0 a 5 anos, respeitando o tempo, a linguagem e a capacidade de aprendizado dessa fase tão importante.',
             'about.text4': 'As canções são simples, repetitivas e intencionais — pensadas para que a Palavra seja lembrada, cantada e vivida no dia a dia da criança.',
@@ -78,7 +78,7 @@ const i18n = {
             // Para os Pais
             'parents.title': 'Para os Pais',
             'parents.safe.title': 'Conteúdo Seguro',
-            'parents.safe.text': 'Todo o conteúdo do Meeemo Play é cuidadosamente desenvolvido para ser seguro e apropriado para crianças. Sem violência, sem conteúdo inadequado, apenas diversão e aprendizado saudável.',
+            'parents.safe.text': 'Todo o conteúdo do Meemo Play é cuidadosamente desenvolvido para ser seguro e apropriado para crianças. Sem violência, sem conteúdo inadequado, apenas diversão e aprendizado saudável.',
             'parents.bible.title': 'Base Bíblica Sólida',
             'parents.bible.text': 'Todas as músicas e histórias são baseadas na Bíblia Sagrada, ensinando valores cristãos e princípios que ajudarão seus filhos a crescerem com uma base sólida na fé.',
             'parents.gentle.title': 'Sem Estímulos Agressivos',
@@ -96,7 +96,7 @@ const i18n = {
             'platform.spotify.desc': 'Ouça nossas músicas',
             
             // Footer
-            'footer.copyright': '© Meeemo Play — Educação cristã infantil',
+            'footer.copyright': '© Meemo Play — Educação cristã infantil',
             'footer.madeWith': 'Feito com amor 💛'
         },
         
@@ -134,9 +134,9 @@ const i18n = {
             'cta.button': 'Subscribe on YouTube',
             
             // Sobre
-            'about.title': 'Meeemo comes from memorize.',
+            'about.title': 'Meemo comes from memorize.',
             'about.subtitle': 'And memorizing God\'s Word from an early age transforms lives.',
-            'about.text1': 'Meeemo Play was born with a clear purpose: to help children keep God\'s Word in their hearts from their earliest years.',
+            'about.text1': 'Meemo Play was born with a clear purpose: to help children keep God\'s Word in their hearts from their earliest years.',
             'about.text2': 'We use music and animation as tools, but our focus is spiritual formation, biblical memorization, and solid Christian foundations for childhood.',
             'about.text3': 'All our content is carefully developed for children aged 0 to 5 years, respecting the time, language, and learning capacity of this very important phase.',
             'about.text4': 'The songs are simple, repetitive, and intentional — designed so that the Word is remembered, sung, and lived in the child\'s daily life.',
@@ -158,7 +158,7 @@ const i18n = {
             // Para os Pais
             'parents.title': 'For Parents',
             'parents.safe.title': 'Safe Content',
-            'parents.safe.text': 'All Meeemo Play content is carefully developed to be safe and appropriate for children. No violence, no inappropriate content, just fun and healthy learning.',
+            'parents.safe.text': 'All Meemo Play content is carefully developed to be safe and appropriate for children. No violence, no inappropriate content, just fun and healthy learning.',
             'parents.bible.title': 'Solid Biblical Foundation',
             'parents.bible.text': 'All songs and stories are based on the Holy Bible, teaching Christian values and principles that will help your children grow with a solid foundation in faith.',
             'parents.gentle.title': 'No Aggressive Stimuli',
@@ -176,7 +176,7 @@ const i18n = {
             'platform.spotify.desc': 'Listen to our music',
             
             // Footer
-            'footer.copyright': '© Meeemo Play — Christian children\'s education',
+            'footer.copyright': '© Meemo Play — Christian children\'s education',
             'footer.madeWith': 'Made with love 💛'
         },
         
@@ -214,9 +214,9 @@ const i18n = {
             'cta.button': 'Suscríbete en YouTube',
             
             // Sobre
-            'about.title': 'Meeemo viene de memorizar.',
+            'about.title': 'Meemo viene de memorizar.',
             'about.subtitle': 'Y memorizar la Palabra de Dios desde temprano transforma vidas.',
-            'about.text1': 'Meeemo Play nació con un propósito claro: ayudar a los niños a guardar la Palabra de Dios en sus corazones desde los primeros años de vida.',
+            'about.text1': 'Meemo Play nació con un propósito claro: ayudar a los niños a guardar la Palabra de Dios en sus corazones desde los primeros años de vida.',
             'about.text2': 'Usamos la música y la animación como herramientas, pero nuestro enfoque es la formación espiritual, la memorización bíblica y los fundamentos cristianos sólidos para la infancia.',
             'about.text3': 'Todo nuestro contenido está cuidadosamente desarrollado para niños de 0 a 5 años, respetando el tiempo, el lenguaje y la capacidad de aprendizaje de esta fase tan importante.',
             'about.text4': 'Las canciones son simples, repetitivas e intencionales — pensadas para que la Palabra sea recordada, cantada y vivida en el día a día del niño.',
@@ -238,7 +238,7 @@ const i18n = {
             // Para os Pais
             'parents.title': 'Para Padres',
             'parents.safe.title': 'Contenido Seguro',
-            'parents.safe.text': 'Todo el contenido de Meeemo Play está cuidadosamente desarrollado para ser seguro y apropiado para niños. Sin violencia, sin contenido inapropiado, solo diversión y aprendizaje saludable.',
+            'parents.safe.text': 'Todo el contenido de Meemo Play está cuidadosamente desarrollado para ser seguro y apropiado para niños. Sin violencia, sin contenido inapropiado, solo diversión y aprendizaje saludable.',
             'parents.bible.title': 'Base Bíblica Sólida',
             'parents.bible.text': 'Todas las canciones e historias están basadas en la Santa Biblia, enseñando valores cristianos y principios que ayudarán a sus hijos a crecer con una base sólida en la fe.',
             'parents.gentle.title': 'Sin Estímulos Agresivos',
@@ -256,7 +256,7 @@ const i18n = {
             'platform.spotify.desc': 'Escucha nuestra música',
             
             // Footer
-            'footer.copyright': '© Meeemo Play — Educación cristiana infantil',
+            'footer.copyright': '© Meemo Play — Educación cristiana infantil',
             'footer.madeWith': 'Hecho con amor 💛'
         }
     },
@@ -372,7 +372,7 @@ const i18n = {
         }
 
         // Atualizar título da página
-        document.title = `${this.t('about.title')} - ${this.t('footer.copyright').split('—')[1] || 'Meeemo Play'}`;
+        document.title = `${this.t('about.title')} - ${this.t('footer.copyright').split('—')[1] || 'Meemo Play'}`;
     },
 
     /**

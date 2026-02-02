@@ -13,12 +13,12 @@
     // ============================================
     
     function applyConfig() {
-        if (typeof MeeemoConfig === 'undefined') {
-            console.warn('MeeemoConfig não encontrado. Certifique-se de que config.js está carregado antes de main.js');
+        if (typeof MeemoConfig === 'undefined') {
+            console.warn('MeemoConfig não encontrado. Certifique-se de que config.js está carregado antes de main.js');
             return;
         }
 
-        const config = MeeemoConfig;
+        const config = MeemoConfig;
 
         // Aplicar cores via CSS variables
         if (config.colors) {
@@ -338,7 +338,7 @@
     // ============================================
     // CONSOLE MESSAGE (Opcional - remover em produção)
     // ============================================
-    console.log('%c🎵 Meeemo Play 🎵', 'color: #FF6B6B; font-size: 20px; font-weight: bold;');
+    console.log('%c🎵 Meemo Play 🎵', 'color: #FF6B6B; font-size: 20px; font-weight: bold;');
     console.log('%cAprender a Palavra de Deus brincando!', 'color: #4ECDC4; font-size: 14px;');
 
 })();

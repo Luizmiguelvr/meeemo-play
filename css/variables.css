@@ -70,6 +70,9 @@
     --spacing-md: 2rem;
     --spacing-lg: 3rem;
     --spacing-xl: 4rem;
+
+    /* Altura do header */
+    --header-height: 80px;
     
     /* ============================================
        BORDAS

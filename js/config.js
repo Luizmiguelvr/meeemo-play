@@ -1,6 +1,6 @@
 /**
  * ============================================
- * MEEEMO PLAY - Configuração Central
+ * MEEMO PLAY - Configuração Central
  * ============================================
  * 
  * ALTERE AQUI PARA MUDAR O SITE INTEIRO
@@ -9,7 +9,7 @@
  * automaticamente em todo o site.
  */
 
-const MeeemoConfig = {
+const MeemoConfig = {
     // ============================================
     // IDENTIDADE DA MARCA
     // ============================================
@@ -18,7 +18,7 @@ const MeeemoConfig = {
      * Nome da marca
      * Altere aqui para mudar o nome em todo o site
      */
-    brandName: 'Meeemo Play',
+    brandName: 'Meemo Play',
     
     /**
      * Slogan principal
@@ -83,8 +83,8 @@ const MeeemoConfig = {
      * Texto sobre o projeto
      */
     about: {
-        intro: '"Meeemo" vem de memorizar! 🧠✨',
-        text1: 'O Meeemo Play é um projeto dedicado a ensinar a Palavra de Deus para crianças de forma alegre, educativa e musical. Acreditamos que a melhor forma de aprender é através da música e da diversão!',
+        intro: '"Meemo" vem de memorizar! 🧠✨',
+        text1: 'O Meemo Play é um projeto dedicado a ensinar a Palavra de Deus para crianças de forma alegre, educativa e musical. Acreditamos que a melhor forma de aprender é através da música e da diversão!',
         text2: 'Nosso conteúdo é especialmente desenvolvido para crianças de 0 a 5 anos, com músicas cativantes, animações coloridas e mensagens bíblicas que ficam na memória.'
     },
     
@@ -116,7 +116,7 @@ const MeeemoConfig = {
         {
             icon: '🛡️',
             title: 'Conteúdo Seguro',
-            text: 'Todo o conteúdo do Meeemo Play é cuidadosamente desenvolvido para ser seguro e apropriado para crianças. Sem violência, sem conteúdo inadequado, apenas diversão e aprendizado saudável.'
+            text: 'Todo o conteúdo do Meemo Play é cuidadosamente desenvolvido para ser seguro e apropriado para crianças. Sem violência, sem conteúdo inadequado, apenas diversão e aprendizado saudável.'
         },
         {
             icon: '📚',
@@ -166,7 +166,7 @@ const MeeemoConfig = {
      * Footer
      */
     footer: {
-        copyright: '© Meeemo Play — Educação cristã infantil',
+        copyright: '© Meemo Play — Educação cristã infantil',
         madeWith: 'Feito com amor 💛'
     },
     
@@ -185,6 +185,6 @@ const MeeemoConfig = {
 
 // Exportar configuração
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = MeeemoConfig;
+    module.exports = MeemoConfig;
 }
 
