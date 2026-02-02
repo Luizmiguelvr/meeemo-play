@@ -51,9 +51,10 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     background: var(--color-primary); /* Azul principal */
     box-shadow: 0 4px 20px rgba(30, 136, 229, 0.3);
-    z-index: 1000;
+    z-index: 9999;
     padding: var(--spacing-sm) 0 !important;
     min-height: var(--header-height);
     transition: var(--transition-normal);

@@ -161,24 +161,8 @@
     }
 
     // ============================================
-    // HEADER SCROLL EFFECT
+    // HEADER (fixo, sem variação no scroll)
     // ============================================
-    const header = document.getElementById('header');
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll > 100) {
-            header.style.boxShadow = '0 4px 20px rgba(30, 136, 229, 0.4)';
-            header.style.padding = '0.5rem 0';
-        } else {
-            header.style.boxShadow = '0 4px 20px rgba(30, 136, 229, 0.3)';
-            header.style.padding = '1rem 0';
-        }
-
-        lastScroll = currentScroll;
-    });
 
     // ============================================
     // ANIMAÇÕES AO SCROLL (Intersection Observer)
