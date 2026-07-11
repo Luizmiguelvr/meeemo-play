@@ -170,12 +170,14 @@
             applyConfig();
             initI18n();
             initHeaderScroll();
+            initHeroScrollHint();
             initReveal();
         });
     } else {
         applyConfig();
         initI18n();
         initHeaderScroll();
+        initHeroScrollHint();
         initReveal();
     }
 
@@ -251,6 +253,45 @@
 
         onScroll();
         window.addEventListener('scroll', onScroll, { passive: true });
+    }
+
+    // ============================================
+    // INDICADOR DE SCROLL DO HERO
+    // ============================================
+    function initHeroScrollHint() {
+        const hint = document.getElementById('heroScrollHint');
+        if (!hint) return;
+
+        const SCROLL_HIDE_AT = 56;
+        const labels = {
+            pt: 'Ver mais',
+            en: 'See more',
+            es: 'Ver más'
+        };
+
+        const updateLabel = () => {
+            const lang = (typeof i18n !== 'undefined' && i18n.currentLang) ? i18n.currentLang : 'pt';
+            hint.setAttribute('aria-label', labels[lang] || labels.pt);
+        };
+
+        const syncVisibility = () => {
+            if (window.scrollY > SCROLL_HIDE_AT) {
+                hint.classList.add('hidden');
+            } else {
+                hint.classList.remove('hidden');
+            }
+        };
+
+        updateLabel();
+        syncVisibility();
+        window.addEventListener('scroll', syncVisibility, { passive: true });
+
+        // Atualizar aria-label ao trocar idioma
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                setTimeout(updateLabel, 0);
+            });
+        });
     }
 
     // ============================================

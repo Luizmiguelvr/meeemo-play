@@ -11,6 +11,7 @@
 
 html {
     scroll-behavior: smooth;
+    color-scheme: light;
 }
 
 body {
@@ -23,6 +24,18 @@ body {
     min-height: 100vh;
     padding-top: var(--header-height);
     -webkit-font-smoothing: antialiased;
+    color-scheme: light;
+}
+
+/* Força identidade clara mesmo com SO / browser em dark mode */
+@media (prefers-color-scheme: dark) {
+    :root,
+    html,
+    body {
+        color-scheme: light;
+        color: var(--color-text-primary);
+        background-color: var(--bg-white);
+    }
 }
 
 img {
@@ -561,6 +574,61 @@ img {
     position: relative;
     z-index: 3;
     flex-shrink: 0;
+}
+
+/* Indicador de scroll do hero — discreto e infantil */
+.hero-scroll-hint {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.25rem;
+    margin-bottom: 0.25rem;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    z-index: 3;
+    flex-shrink: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.35s ease;
+    animation: heroScrollBounce 2.6s ease-in-out infinite;
+}
+
+.hero-scroll-hint.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(6px);
+    animation: none;
+}
+
+.hero-scroll-hint__circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.22);
+    border: 1.5px solid rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.hero-scroll-hint__icon {
+    display: block;
+}
+
+@keyframes heroScrollBounce {
+    0%, 100% { transform: translateY(0); }
+    45% { transform: translateY(7px); }
+    70% { transform: translateY(2px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-scroll-hint {
+        animation: none;
+    }
 }
 
 .btn {
