@@ -105,6 +105,7 @@ Edite `js/config.js` na seção `logo` e substitua o SVG.
 - Não há processo de build necessário
 - Todos os caminhos são relativos
 - Compatível com qualquer servidor estático
+- **Modo claro forçado:** o site declara `color-scheme: light` (meta + CSS). Em alguns Android o Chrome/WebView ainda pode aplicar “auto dark” sem controle total — as metas e o CSS reduzem o risco, mas não garantem 100% nesses casos.
 
 ## 💛
 

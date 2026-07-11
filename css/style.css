@@ -12,6 +12,7 @@
 html {
     scroll-behavior: smooth;
     color-scheme: light;
+    background-color: #fff;
 }
 
 body {
@@ -19,7 +20,7 @@ body {
     font-size: var(--font-size-base);
     line-height: 1.65;
     color: var(--color-text-primary);
-    background-color: var(--bg-white);
+    background-color: #fff;
     overflow-x: hidden;
     min-height: 100vh;
     padding-top: var(--header-height);
@@ -27,14 +28,19 @@ body {
     color-scheme: light;
 }
 
-/* Força identidade clara mesmo com SO / browser em dark mode */
+/*
+ * Modo claro forçado (site é light-only).
+ * Nota: em alguns Android (Chrome / WebView) o SO ainda pode
+ * aplicar "auto dark" agressivo sem controle total via CSS/meta.
+ * color-scheme + metas reduzem o risco, mas não eliminam 100%.
+ */
 @media (prefers-color-scheme: dark) {
     :root,
     html,
     body {
-        color-scheme: light;
+        color-scheme: light !important;
         color: var(--color-text-primary);
-        background-color: var(--bg-white);
+        background-color: #fff !important;
     }
 }
 
