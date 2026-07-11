@@ -30,10 +30,10 @@ const i18n = {
             'btn.watch': 'Assistir Agora',
             
             // Hero
-            'hero.title': 'Transforme tempo de tela em tempo de propósito.',
-            'hero.subtitle': 'Um refúgio seguro de músicas e histórias desenhadas para gravar verdades eternas no coração do seu filho, na fase em que ele mais precisa.',
-            'btn.youtube': 'Assista no YouTube',
-            'btn.spotify': 'Ouça no Spotify',
+            'hero.title': 'Transforme o tempo de tela em tempo com a Palavra de Deus.',
+            'hero.subtitle': 'Músicas, histórias e versículos para ajudar crianças a guardarem a Palavra de Deus desde os primeiros anos de vida.',
+            'btn.youtube': 'Assistir no YouTube',
+            'btn.spotify': 'Ouvir no Spotify',
 
             // O Que É (Value Proposition)
             'value.title': 'Mais que diversão, uma ferramenta de amor.',
@@ -94,10 +94,19 @@ const i18n = {
             'platform.youtubeKids.desc': 'Versão segura para crianças',
             'platform.spotify': 'Spotify',
             'platform.spotify.desc': 'Ouça nossas músicas',
+            'platform.appleMusic': 'Apple Music',
+            'platform.appleMusic.desc': 'Ouça no Apple Music',
+            'platform.youtubeMusic': 'YouTube Music',
+            'platform.youtubeMusic.desc': 'Ouça no YouTube Music',
+            'platform.instagram': 'Instagram',
+            'platform.instagram.desc': 'Siga-nos no Instagram',
             
             // Footer
             'footer.copyright': '© Meemo Play — Educação cristã infantil',
-            'footer.madeWith': 'Feito com amor 💛'
+            'footer.madeWith': 'Feito com amor',
+            'footer.tagline': 'Aprender a Palavra de Deus brincando',
+            'footer.youtube': 'YouTube',
+            'footer.instagram': 'Instagram'
         },
         
         en: {
@@ -110,8 +119,8 @@ const i18n = {
             'btn.watch': 'Watch Now',
             
             // Hero
-            'hero.title': 'Turn screen time into purpose time.',
-            'hero.subtitle': 'A safe haven of songs and stories designed to etch eternal truths into your child\'s heart, right when they need it most.',
+            'hero.title': 'Turn screen time into time with God\'s Word.',
+            'hero.subtitle': 'Songs, stories, and verses to help children keep God\'s Word in their hearts from their earliest years.',
             'btn.youtube': 'Watch on YouTube',
             'btn.spotify': 'Listen on Spotify',
 
@@ -174,10 +183,19 @@ const i18n = {
             'platform.youtubeKids.desc': 'Safe version for children',
             'platform.spotify': 'Spotify',
             'platform.spotify.desc': 'Listen to our music',
+            'platform.appleMusic': 'Apple Music',
+            'platform.appleMusic.desc': 'Listen on Apple Music',
+            'platform.youtubeMusic': 'YouTube Music',
+            'platform.youtubeMusic.desc': 'Listen on YouTube Music',
+            'platform.instagram': 'Instagram',
+            'platform.instagram.desc': 'Follow us on Instagram',
             
             // Footer
             'footer.copyright': '© Meemo Play — Christian children\'s education',
-            'footer.madeWith': 'Made with love 💛'
+            'footer.madeWith': 'Made with love',
+            'footer.tagline': 'Learning God\'s Word through play',
+            'footer.youtube': 'YouTube',
+            'footer.instagram': 'Instagram'
         },
         
         es: {
@@ -190,8 +208,8 @@ const i18n = {
             'btn.watch': 'Ver Ahora',
             
             // Hero
-            'hero.title': 'Transforma el tiempo de pantalla en tiempo de propósito.',
-            'hero.subtitle': 'Un refugio seguro de canciones e historias diseñadas para grabar verdades eternas en el corazón de tu hijo, en la etapa en que más lo necesita.',
+            'hero.title': 'Transforma el tiempo de pantalla en tiempo con la Palabra de Dios.',
+            'hero.subtitle': 'Canciones, historias y versículos para ayudar a los niños a guardar la Palabra de Dios desde los primeros años de vida.',
             'btn.youtube': 'Ver en YouTube',
             'btn.spotify': 'Escuchar en Spotify',
 
@@ -254,10 +272,19 @@ const i18n = {
             'platform.youtubeKids.desc': 'Versión segura para niños',
             'platform.spotify': 'Spotify',
             'platform.spotify.desc': 'Escucha nuestra música',
+            'platform.appleMusic': 'Apple Music',
+            'platform.appleMusic.desc': 'Escucha en Apple Music',
+            'platform.youtubeMusic': 'YouTube Music',
+            'platform.youtubeMusic.desc': 'Escucha en YouTube Music',
+            'platform.instagram': 'Instagram',
+            'platform.instagram.desc': 'Síguenos en Instagram',
             
             // Footer
             'footer.copyright': '© Meemo Play — Educación cristiana infantil',
-            'footer.madeWith': 'Hecho con amor 💛'
+            'footer.madeWith': 'Hecho con amor',
+            'footer.tagline': 'Aprender la Palabra de Dios jugando',
+            'footer.youtube': 'YouTube',
+            'footer.instagram': 'Instagram'
         }
     },
 
@@ -390,6 +417,13 @@ const i18n = {
         
         // Atualizar seletor de idioma
         this.updateLanguageSelector();
+
+        // Atualizar links YouTube + Instagram conforme o idioma
+        if (typeof window.updateLangLinks === 'function') {
+            window.updateLangLinks(lang);
+        } else if (typeof window.updateYouTubeLinks === 'function') {
+            window.updateYouTubeLinks(lang);
+        }
     },
 
     /**
@@ -417,6 +451,12 @@ const i18n = {
         this.currentLang = this.detectLanguage();
         this.applyTranslations();
         this.updateLanguageSelector();
+
+        if (typeof window.updateLangLinks === 'function') {
+            window.updateLangLinks(this.currentLang);
+        } else if (typeof window.updateYouTubeLinks === 'function') {
+            window.updateYouTubeLinks(this.currentLang);
+        }
     }
 };
 

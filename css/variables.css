@@ -1,122 +1,142 @@
 /**
  * ============================================
- * MEEEMO PLAY - Variáveis CSS
+ * MEEMO PLAY - Variáveis CSS
  * ============================================
- * 
- * ALTERE AQUI PARA MUDAR AS CORES E ESTILOS DO SITE INTEIRO
- * 
- * Todas as cores, bordas, sombras e espaçamentos estão definidos aqui.
- * Nenhuma cor deve ser hardcoded no style.css
+ * Paleta saturada alinhada ao banner do canal
+ * e ao logo oficial (azul, amarelo, verde, roxo).
  */
 
 :root {
     /* ============================================
-       PALETA DE CORES
-       ============================================
-       Altere aqui para mudar as cores em todo o site
-    */
-    
-    --color-primary: #1E88E5;      /* Azul principal - identidade da marca */
-    --color-blue-light: #64B5F6;   /* Azul claro */
-    --color-yellow: #FFD600;       /* Amarelo vibrante */
-    --color-green: #00C853;        /* Verde vibrante */
-    --color-red: #FF5252;          /* Vermelho vibrante (detalhes) */
-    --color-white: #FFFFFF;        /* Branco */
-    --color-dark: #1565C0;         /* Azul escuro (footer) */
-    
-    /* Cores de texto */
-    --color-text-primary: #1a1a1a;
-    --color-text-secondary: #333;
-    --color-text-light: #666;
+       PALETA DE CORES (marca Meemo Play)
+       ============================================ */
+    --color-primary: #1E6FE8;        /* Azul Meemo vibrante */
+    --color-blue-deep: #0B5AD4;      /* Azul profundo topo */
+    --color-blue-light: #4DB0FF;     /* Azul céu */
+    --color-blue-sky: #7CC8FF;       /* Azul claro */
+    --color-blue-baby: #C8E8FF;      /* Azul bebê (Safe Zone) */
+    --color-yellow: #FFD024;         /* Amarelo estrela saturado */
+    --color-yellow-deep: #FFB800;    /* Amarelo CTA */
+    --color-yellow-warm: #FFC94A;    /* Amarelo faixa quente */
+    --color-green: #2EDB52;          /* Verde logo saturado */
+    --color-green-soft: #7AE88F;     /* Verde áreas específicas */
+    --color-green-deep: #22B845;     /* Verde Spotify */
+    --color-red: #FF3D4A;            /* Vermelho YouTube */
+    --color-orange: #FF7A2E;         /* Laranja faixa quente */
+    --color-orange-soft: #FFA85C;    /* Laranja suave */
+    --color-purple: #7B4FFF;         /* Roxo Play */
+    --color-purple-deep: #4A2EC8;    /* Roxo footer */
+    --color-lilac: #B8A0FF;          /* Lilás plataformas */
+    --color-white: #FFFFFF;
+    --color-cream: #FFF9F0;          /* Branco quente */
+    --color-beige: #F7F0E4;          /* Bege branding */
+    --color-mint: #E6FFF0;
+    --color-lavender: #EDE6FF;
+
+    /* Texto */
+    --color-text-primary: #1F2F5C;
+    --color-text-secondary: #3A4A78;
+    --color-text-light: #5A6A98;
     --color-text-white: #FFFFFF;
-    
+
     /* ============================================
-       CORES DE FUNDO
-       ============================================
-    */
-    
-    --bg-light: #F5F9FF;           /* Azul muito claro para fundos */
+       FUNDOS POR SEÇÃO
+       ============================================ */
     --bg-white: #FFFFFF;
-    --bg-dark: #1565C0;             /* Azul escuro para footer */
-    
+    --bg-value: #FFFBF5;             /* Branco quente — value */
+    --bg-branding: #F8F2E8;          /* Bege claro — elefante */
+    --bg-method: #C8E8FF;            /* Azul bebê — zona segura */
+    --bg-light: #D6EEFF;
+    --bg-soft: #FFF6E8;
+    --bg-dark: #3D2FA0;
+    --bg-footer: linear-gradient(175deg, #4A2EC8 0%, #2B5FD4 42%, #1A4AB8 100%);
+    --bg-platforms: linear-gradient(165deg, #5BB8FF 0%, #7AB8FF 35%, #B8A0FF 100%);
+    --bg-section-alt: #FFF0F5;
+
     /* ============================================
        GRADIENTES
-       ============================================
-    */
-    
-    --bg-gradient-hero: linear-gradient(135deg, #1E88E5 0%, #64B5F6 100%);
-    --bg-gradient-card-1: linear-gradient(135deg, #FFD600 0%, #FFA726 100%);
-    --bg-gradient-card-2: linear-gradient(135deg, #00C853 0%, #4CAF50 100%);
-    --bg-gradient-card-3: linear-gradient(135deg, #1E88E5 0%, #42A5F5 100%);
-    
+       ============================================ */
+    /* Hero: azul intenso estilo banner YouTube → faixa quente na base */
+    --bg-gradient-hero: linear-gradient(
+        180deg,
+        #0652D4 0%,
+        #0B6AE8 16%,
+        #1A82F5 32%,
+        #3A9EFF 48%,
+        #FFE066 72%,
+        #FFB84A 88%,
+        #FF8A3A 100%
+    );
+    --bg-gradient-card-1: linear-gradient(135deg, #FFD024 0%, #FF7A2E 100%);
+    --bg-gradient-card-2: linear-gradient(135deg, #2EDB52 0%, #22B845 100%);
+    --bg-gradient-card-3: linear-gradient(135deg, #1E6FE8 0%, #7B4FFF 100%);
+    --bg-gradient-cta: linear-gradient(135deg, #4DB0FF 0%, #7B4FFF 55%, #FF7A2E 100%);
+    --bg-character-glow: radial-gradient(
+        ellipse 70% 55% at 50% 55%,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 236, 140, 0.55) 28%,
+        rgba(255, 180, 60, 0.22) 55%,
+        transparent 72%
+    );
+
     /* ============================================
        TIPOGRAFIA
-       ============================================
-    */
-    
+       ============================================ */
     --font-primary: 'Fredoka', sans-serif;
     --font-size-base: 16px;
-    --font-size-h1: 3rem;
-    --font-size-h2: 2.5rem;
-    --font-size-h3: 1.8rem;
-    
+    --font-size-h1: clamp(1.85rem, 4.5vw, 3.15rem);
+    --font-size-h2: clamp(1.65rem, 3.5vw, 2.5rem);
+    --font-size-h3: clamp(1.25rem, 2.5vw, 1.75rem);
+
     /* ============================================
        ESPAÇAMENTOS
-       ============================================
-    */
-    
+       ============================================ */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 3rem;
-    --spacing-xl: 4rem;
+    --spacing-xl: 4.5rem;
+    --spacing-section-open: 5.5rem;
+    --spacing-section-compact: 3.25rem;
+    --header-height: 88px;
 
-    /* Altura do header */
-    --header-height: 80px;
-    
     /* ============================================
        BORDAS
-       ============================================
-    */
-    
-    --border-radius-sm: 10px;
-    --border-radius-md: 20px;
-    --border-radius-lg: 30px;
-    --border-radius-xl: 50px;
-    --border-radius-card: 40px;
-    --border-radius-pais: 35px;
-    
+       ============================================ */
+    --border-radius-sm: 12px;
+    --border-radius-md: 22px;
+    --border-radius-lg: 32px;
+    --border-radius-xl: 999px;
+    --border-radius-card: 36px;
+    --border-radius-pais: 32px;
+
     /* ============================================
        SOMBRAS
-       ============================================
-    */
-    
-    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.15);
-    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.2);
-    --shadow-card: 0 8px 25px rgba(30, 136, 229, 0.15);
-    --shadow-card-hover: 0 15px 40px rgba(30, 136, 229, 0.3);
-    --shadow-header: 0 4px 20px rgba(30, 136, 229, 0.3);
-    
+       ============================================ */
+    --shadow-sm: 0 4px 14px rgba(30, 111, 232, 0.12);
+    --shadow-md: 0 8px 24px rgba(30, 111, 232, 0.16);
+    --shadow-lg: 0 16px 40px rgba(74, 46, 200, 0.2);
+    --shadow-card: 0 12px 0 rgba(30, 111, 232, 0.1), 0 16px 36px rgba(30, 111, 232, 0.14);
+    --shadow-card-hover: 0 16px 0 rgba(123, 79, 255, 0.16), 0 24px 48px rgba(123, 79, 255, 0.24);
+    --shadow-header: 0 6px 24px rgba(30, 111, 232, 0.18);
+    --shadow-toy: 0 6px 0 rgba(0, 0, 0, 0.12), 0 10px 24px rgba(30, 111, 232, 0.2);
+    --shadow-characters: 0 28px 50px rgba(31, 47, 92, 0.32), 0 8px 20px rgba(255, 140, 40, 0.18);
+
     /* ============================================
        TRANSIÇÕES
-       ============================================
-    */
-    
+       ============================================ */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
     --transition-bounce: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    
+
     /* ============================================
        OPACIDADES
-       ============================================
-    */
-    
-    --opacity-note: 0.08;
-    --opacity-bubble: 0.06;
-    --opacity-cloud: 0.05;
-    --opacity-floating-note: 0.4;
+       ============================================ */
+    --opacity-note: 0.1;
+    --opacity-bubble: 0.2;
+    --opacity-cloud: 0.4;
+    --opacity-floating-note: 0.5;
     --opacity-hero-subtitle: 0.95;
+    --opacity-section-decor: 0.08;
 }
-

@@ -33,34 +33,39 @@ const MeemoConfig = {
     description: 'Músicas cristãs educativas e animadas para crianças aprenderem sobre Deus de forma divertida e memorável',
     
     /**
-     * Logo SVG
-     * Altere o SVG aqui para mudar o logo em todo o site
+     * Logo oficial (PNG)
+     * Usado no header e footer
      */
     logo: {
-        svg: `<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="25" cy="25" r="23" fill="#FFD600" stroke="#FFFFFF" stroke-width="2"/>
-            <text x="25" y="32" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#1E88E5">M</text>
-            <circle cx="15" cy="15" r="3" fill="#1E88E5"/>
-            <circle cx="35" cy="15" r="3" fill="#1E88E5"/>
-        </svg>`,
-        width: 50,
-        height: 50
+        src: 'assets/images/logo.png',
+        alt: 'Meemo Play',
+        width: 1536,
+        height: 1024
+    },
+
+    /**
+     * Assets de marca
+     */
+    assets: {
+        mascot: 'assets/images/meemo.png',
+        characters: 'assets/images/personagens.png'
     },
     
     // ============================================
     // CORES PRINCIPAIS
     // ============================================
-    // Altere aqui para mudar as cores em todo o site
-    // As cores são aplicadas via CSS variables em variables.css
+    // Alinhadas ao logo oficial Meemo Play
     
     colors: {
-        primary: '#1E88E5',      // Azul principal - identidade da marca
-        blueLight: '#64B5F6',    // Azul claro
-        yellow: '#FFD600',       // Amarelo vibrante
-        green: '#00C853',        // Verde vibrante
-        red: '#FF5252',          // Vermelho vibrante (detalhes)
-        white: '#FFFFFF',        // Branco
-        dark: '#1565C0'          // Azul escuro (footer)
+        primary: '#2B6DE0',      // Azul Meemo
+        blueLight: '#5BA3F5',    // Azul céu
+        yellow: '#FFD24A',       // Amarelo estrela
+        green: '#3ECF5A',        // Verde logo
+        red: '#FF4D5A',          // Vermelho logo
+        orange: '#FF8A3D',       // Laranja logo
+        purple: '#7B5CFF',       // Roxo Play
+        white: '#FFFFFF',
+        dark: '#3A4DB8'          // Azul-roxo footer
     },
     
     // ============================================
@@ -68,11 +73,30 @@ const MeemoConfig = {
     // ============================================
     // Altere aqui para mudar os links em todo o site
     
+    /**
+     * Links por idioma (YouTube + Instagram)
+     * Atualizados automaticamente em init / setLanguage
+     */
+    linksByLang: {
+        youtube: {
+            pt: 'https://www.youtube.com/@meemoplaybr',
+            en: 'https://www.youtube.com/@MeemoPlay',
+            es: 'https://www.youtube.com/@MeemoPlayEspa%C3%B1ol'
+        },
+        instagram: {
+            pt: 'https://www.instagram.com/meemoplaybrasil/',
+            en: 'https://www.instagram.com/meemoplayus/',
+            es: 'https://www.instagram.com/meemoplayes/'
+        }
+    },
+
     links: {
-        youtube: '#',                    // Link do canal YouTube
-        youtubeKids: '#',                // Link do YouTube Kids
-        spotify: '#',                    // Link do Spotify
-        // Adicione mais links conforme necessário
+        youtube: 'https://www.youtube.com/@meemoplaybr', // fallback / default PT
+        youtubeKids: 'https://www.youtube.com/@meemoplaybr',
+        spotify: 'https://open.spotify.com/intl-pt/artist/1PZm5jJFOwCYdkht5tzA0x',
+        appleMusic: 'https://music.apple.com/us/album/genesis-em-portugues-br/6777862038',
+        youtubeMusic: 'https://music.youtube.com/channel/UCJ6vRJGf9xrIBMwuHaxFTcg',
+        instagram: 'https://www.instagram.com/meemoplaybrasil/' // fallback / default PT
     },
     
     // ============================================
@@ -159,6 +183,27 @@ const MeemoConfig = {
             text: 'Ouça nossas músicas',
             link: 'spotify',
             color: '#00C853'
+        },
+        {
+            name: 'Apple Music',
+            icon: 'appleMusic',
+            text: 'Ouça no Apple Music',
+            link: 'appleMusic',
+            color: '#FC3C44'
+        },
+        {
+            name: 'YouTube Music',
+            icon: 'youtubeMusic',
+            text: 'Ouça no YouTube Music',
+            link: 'youtubeMusic',
+            color: '#FF0000'
+        },
+        {
+            name: 'Instagram',
+            icon: 'instagram',
+            text: 'Siga-nos no Instagram',
+            link: 'instagram',
+            color: '#DD2A7B'
         }
     ],
     

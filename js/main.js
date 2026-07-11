@@ -1,7 +1,7 @@
 /**
- * MEEEMO PLAY - JavaScript Principal
+ * MEEMO PLAY - JavaScript Principal
  * Interatividade e Animações
- * 
+ *
  * Consome config.js para aplicar configurações dinamicamente
  */
 
@@ -11,7 +11,82 @@
     // ============================================
     // APLICAR CONFIGURAÇÕES DO CONFIG.JS
     // ============================================
-    
+
+    function getLangLink(platform, lang) {
+        if (typeof MeemoConfig === 'undefined') {
+            return '#';
+        }
+
+        const code = lang || (typeof i18n !== 'undefined' ? i18n.currentLang : 'pt');
+        const byLang = MeemoConfig.linksByLang || {};
+        const platformMap = byLang[platform] || {};
+        const links = MeemoConfig.links || {};
+
+        return platformMap[code] || links[platform] || '#';
+    }
+
+    function getYouTubeUrl(lang) {
+        return getLangLink('youtube', lang);
+    }
+
+    function getInstagramUrl(lang) {
+        return getLangLink('instagram', lang);
+    }
+
+    /**
+     * Atualiza todos os links YouTube e Instagram
+     * conforme o idioma atual. Chamado no init e em setLanguage.
+     */
+    function updateLangLinks(lang) {
+        if (typeof MeemoConfig === 'undefined' || !MeemoConfig.links) {
+            return;
+        }
+
+        const youtubeUrl = getYouTubeUrl(lang);
+        const instagramUrl = getInstagramUrl(lang);
+        const links = MeemoConfig.links;
+
+        // Manter links sincronizados com o idioma ativo
+        links.youtube = youtubeUrl;
+        links.youtubeKids = youtubeUrl;
+        links.instagram = instagramUrl;
+
+        // Botões / CTAs YouTube (hero, CTA final, etc.)
+        document.querySelectorAll('.btn-youtube, [data-youtube-link]').forEach(el => {
+            if (el.tagName === 'A') {
+                el.href = youtubeUrl;
+                el.target = '_blank';
+                el.rel = 'noopener noreferrer';
+            }
+        });
+
+        // Cards de plataforma YouTube / YouTube Kids
+        document.querySelectorAll('[data-platform="youtube"], [data-platform="youtubeKids"]').forEach(el => {
+            el.href = youtubeUrl;
+        });
+
+        // Card YouTube (classe) — fallback se data-platform não existir
+        document.querySelectorAll('.plataforma-youtube, .plataforma-youtube-kids').forEach(el => {
+            el.href = youtubeUrl;
+        });
+
+        // Instagram: cards, footer e qualquer data-instagram-link
+        document.querySelectorAll(
+            '[data-platform="instagram"], .plataforma-instagram, [data-instagram-link]'
+        ).forEach(el => {
+            if (el.tagName === 'A') {
+                el.href = instagramUrl;
+                el.target = '_blank';
+                el.rel = 'noopener noreferrer';
+            }
+        });
+    }
+
+    // Alias legado + exposição global
+    const updateYouTubeLinks = updateLangLinks;
+    window.updateLangLinks = updateLangLinks;
+    window.updateYouTubeLinks = updateYouTubeLinks;
+
     function applyConfig() {
         if (typeof MeemoConfig === 'undefined') {
             console.warn('MeemoConfig não encontrado. Certifique-se de que config.js está carregado antes de main.js');
@@ -30,88 +105,92 @@
             root.style.setProperty('--color-red', config.colors.red);
             root.style.setProperty('--color-white', config.colors.white);
             root.style.setProperty('--color-dark', config.colors.dark);
+            if (config.colors.orange) root.style.setProperty('--color-orange', config.colors.orange);
+            if (config.colors.purple) root.style.setProperty('--color-purple', config.colors.purple);
         }
 
-        // Atualizar logo
-        const logos = document.querySelectorAll('.logo svg, .footer-logo svg');
-        if (config.logo && logos.length > 0) {
-            logos.forEach(logo => {
-                logo.outerHTML = config.logo.svg;
+        // Logo em imagem (não substituir por SVG antigo)
+        if (config.logo && config.logo.src) {
+            document.querySelectorAll('.logo-img, .footer-logo-img').forEach(img => {
+                img.src = config.logo.src;
+                if (config.logo.alt) img.alt = config.logo.alt;
             });
         }
 
-        // Atualizar nome da marca
+        // Nome da marca (quando ainda houver texto)
         const brandNames = document.querySelectorAll('.logo-text, .footer-logo-text');
         brandNames.forEach(el => {
             if (el) el.textContent = config.brandName;
         });
 
-        // Título e subtítulo do hero são gerenciados pelo i18n
-        // Não sobrescrever aqui para manter compatibilidade com traduções
-
-        // Atualizar links dos botões
-        const btnYouTube = document.querySelectorAll('.btn-youtube');
-        if (btnYouTube.length > 0 && config.links.youtube) {
-            btnYouTube.forEach(btn => {
-                btn.href = config.links.youtube;
-            });
-        }
-
-        const btnSpotify = document.querySelectorAll('.btn-spotify');
-        if (btnSpotify.length > 0 && config.links.spotify) {
-            btnSpotify.forEach(btn => {
+        // Links estáticos (Spotify, Apple Music, YouTube Music)
+        document.querySelectorAll('.btn-spotify').forEach(btn => {
+            if (config.links.spotify) {
                 btn.href = config.links.spotify;
-            });
-        }
+                btn.target = '_blank';
+                btn.rel = 'noopener noreferrer';
+            }
+        });
 
-        // Atualizar links das plataformas
-        const platformCards = document.querySelectorAll('.plataforma-card');
-        if (config.platforms && platformCards.length > 0) {
-            platformCards.forEach((card, index) => {
-                if (config.platforms[index] && config.links[config.platforms[index].link]) {
-                    card.href = config.links[config.platforms[index].link];
-                }
-            });
-        }
+        document.querySelectorAll('[data-platform="spotify"]').forEach(el => {
+            if (config.links.spotify) el.href = config.links.spotify;
+        });
 
-        // Atualizar footer
-        const footerText = document.querySelector('.footer-text');
-        if (footerText && config.footer) {
-            footerText.innerHTML = `${config.footer.copyright}<br>${config.footer.madeWith}`;
-        }
+        document.querySelectorAll('[data-platform="appleMusic"]').forEach(el => {
+            if (config.links.appleMusic) el.href = config.links.appleMusic;
+        });
 
-        // Atualizar título da página
+        document.querySelectorAll('[data-platform="youtubeMusic"]').forEach(el => {
+            if (config.links.youtubeMusic) el.href = config.links.youtubeMusic;
+        });
+
+        // Fallbacks por classe
+        document.querySelectorAll('.plataforma-spotify').forEach(el => {
+            if (config.links.spotify) el.href = config.links.spotify;
+        });
+        document.querySelectorAll('.plataforma-apple-music').forEach(el => {
+            if (config.links.appleMusic) el.href = config.links.appleMusic;
+        });
+        document.querySelectorAll('.plataforma-youtube-music').forEach(el => {
+            if (config.links.youtubeMusic) el.href = config.links.youtubeMusic;
+        });
+
+        // YouTube + Instagram por idioma (também no init)
+        const lang = (typeof i18n !== 'undefined' && i18n.currentLang) ? i18n.currentLang : 'pt';
+        updateLangLinks(lang);
+
+        // Título da página
         if (config.brandName) {
             document.title = `${config.brandName} - Educação Cristã Infantil`;
         }
     }
 
-    // Aplicar configurações quando o DOM estiver pronto
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
             applyConfig();
             initI18n();
+            initHeaderScroll();
+            initReveal();
         });
     } else {
         applyConfig();
         initI18n();
+        initHeaderScroll();
+        initReveal();
     }
 
     // ============================================
     // INTERNACIONALIZAÇÃO (i18n)
     // ============================================
-    
+
     function initI18n() {
-        // Verificar se i18n está disponível
         if (typeof i18n === 'undefined') {
             console.warn('i18n não encontrado. Certifique-se de que i18n.js está carregado.');
             return;
         }
 
-        // Inicializar i18n
         i18n.init();
 
-        // Event listeners para seletor de idioma
         const langButtons = document.querySelectorAll('.lang-btn');
         langButtons.forEach(btn => {
             btn.addEventListener('click', function() {
@@ -130,15 +209,14 @@
     const nav = document.getElementById('nav');
     const navLinks = document.querySelectorAll('.nav-link');
     const btnAssistir = document.getElementById('btnAssistir');
+    const header = document.getElementById('header');
 
-    // Toggle menu mobile
     if (menuToggle) {
         menuToggle.addEventListener('click', function() {
             nav.classList.toggle('active');
         });
     }
 
-    // Fechar menu ao clicar em um link
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             if (window.innerWidth <= 968) {
@@ -147,56 +225,60 @@
         });
     });
 
-    // Botão "Assistir Agora" - scroll para plataformas
     if (btnAssistir) {
         btnAssistir.addEventListener('click', function() {
-            const plataformasSection = document.getElementById('plataformas');
-            if (plataformasSection) {
-                plataformasSection.scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+            const lang = (typeof i18n !== 'undefined' && i18n.currentLang) ? i18n.currentLang : 'pt';
+            const youtubeUrl = getYouTubeUrl(lang);
+            if (youtubeUrl && youtubeUrl !== '#') {
+                window.open(youtubeUrl, '_blank', 'noopener,noreferrer');
             }
         });
     }
 
     // ============================================
-    // HEADER (fixo, sem variação no scroll)
+    // HEADER — só sombra/fundo no scroll (NÃO padding)
     // ============================================
+    function initHeaderScroll() {
+        if (!header) return;
 
-    // ============================================
-    // ANIMAÇÕES AO SCROLL (Intersection Observer)
-    // ============================================
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
+        const onScroll = () => {
+            if (window.scrollY > 16) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
             }
-        });
-    }, observerOptions);
+        };
 
-    // Elementos para animar
-    const animateElements = document.querySelectorAll('.card, .pais-card, .plataforma-card, .sobre-content, .section-header');
-    
-    animateElements.forEach((el, index) => {
-        // Garantir que o elemento seja visível primeiro
-        el.style.opacity = '1';
-        el.style.visibility = 'visible';
-        
-        // Adiciona delay progressivo apenas para animação
-        if (index % 2 === 0) {
-            el.classList.add('fade-in-delay-1');
-        } else {
-            el.classList.add('fade-in-delay-2');
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+    }
+
+    // ============================================
+    // SCROLL REVEAL
+    // ============================================
+    function initReveal() {
+        const revealEls = document.querySelectorAll('.reveal');
+        if (!revealEls.length) return;
+
+        if (!('IntersectionObserver' in window)) {
+            revealEls.forEach(el => el.classList.add('is-visible'));
+            return;
         }
-        observer.observe(el);
-    });
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealEls.forEach(el => observer.observe(el));
+    }
 
     // ============================================
     // SCROLL SUAVE PARA LINKS DE NAVEGAÇÃO
@@ -204,17 +286,17 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
-            
-            // Ignora links vazios ou apenas #
-            if (href === '#' || href === '') {
+
+            // Só âncoras internas; links externos (YouTube, Spotify, etc.) passam direto
+            if (!href || href === '#' || !href.startsWith('#')) {
                 return;
             }
 
             const target = document.querySelector(href);
-            
+
             if (target) {
                 e.preventDefault();
-                const headerHeight = header ? header.offsetHeight : 80;
+                const headerHeight = header ? header.offsetHeight : 88;
                 const targetPosition = target.offsetTop - headerHeight;
 
                 window.scrollTo({
@@ -226,64 +308,28 @@
     });
 
     // ============================================
-    // ANIMAÇÃO DE NOTAS MUSICAIS
-    // ============================================
-    const floatingNotes = document.querySelectorAll('.floating-note');
-    
-    floatingNotes.forEach((note, index) => {
-        // Adiciona movimento aleatório
-        setInterval(() => {
-            const randomX = Math.random() * 20 - 10;
-            const randomY = Math.random() * 20 - 10;
-            note.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${Math.random() * 20 - 10}deg)`;
-        }, 3000 + index * 500);
-    });
-
-    // ============================================
-    // EFEITO PARALLAX SUAVE NO HERO
+    // PARALLAX LEVE NOS DECORATIVOS DO HERO
     // ============================================
     const hero = document.querySelector('.hero');
-    const heroContent = document.querySelector('.hero-content');
+    const heroBg = document.querySelector('.hero-background');
 
-    if (hero && heroContent) {
+    if (hero && heroBg && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         window.addEventListener('scroll', function() {
             const scrolled = window.pageYOffset;
-            const heroOffset = hero.offsetTop;
             const heroHeight = hero.offsetHeight;
 
-            if (scrolled < heroOffset + heroHeight) {
-                const parallax = scrolled * 0.5;
-                heroContent.style.transform = `translateY(${parallax}px)`;
-                heroContent.style.opacity = 1 - (scrolled / heroHeight) * 0.5;
+            if (scrolled < heroHeight) {
+                heroBg.style.transform = `translateY(${scrolled * 0.18}px)`;
             }
-        });
+        }, { passive: true });
     }
 
     // ============================================
-    // HOVER EFFECTS NOS CARDS
+    // FEEDBACK VISUAL NOS CARDS DE PLATAFORMA
     // ============================================
-    const cards = document.querySelectorAll('.card');
-    
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
-        });
-
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-
-    // ============================================
-    // BOTÕES DE PLATAFORMA - FEEDBACK VISUAL
-    // ============================================
-    const plataformaCards = document.querySelectorAll('.plataforma-card');
-    
-    plataformaCards.forEach(card => {
-        card.addEventListener('click', function(e) {
-            // Adiciona efeito de "pulse" ao clicar
-            this.style.transform = 'scale(0.95)';
-            
+    document.querySelectorAll('.plataforma-card').forEach(card => {
+        card.addEventListener('click', function() {
+            this.style.transform = 'scale(0.96)';
             setTimeout(() => {
                 this.style.transform = '';
             }, 150);
@@ -291,7 +337,7 @@
     });
 
     // ============================================
-    // LAZY LOADING DE IMAGENS (se houver)
+    // LAZY LOADING (imagens com data-src)
     // ============================================
     if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -312,18 +358,8 @@
         });
     }
 
-    // ============================================
-    // PREVENIR FLASH DE CONTEÚDO NÃO ESTILIZADO
-    // ============================================
     document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('loaded');
     });
 
-    // ============================================
-    // CONSOLE MESSAGE (Opcional - remover em produção)
-    // ============================================
-    console.log('%c🎵 Meemo Play 🎵', 'color: #FF6B6B; font-size: 20px; font-weight: bold;');
-    console.log('%cAprender a Palavra de Deus brincando!', 'color: #4ECDC4; font-size: 14px;');
-
 })();
-
